@@ -1,12 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Blog Starter`,
-    description: `A Blog starter`,
-    author: `Boy with Silver Wings`,
-    authorTagline: 'Engineer. Driven by Passion',
+    title: `GreenDiver.log`,
+    description: `技術ブログ`,
+    author: `GreenDiver234`,
+    authorTagline: '自称フルスタックエンジニア',
+    /*
     social: {
-      twitter: `agneymenon`,
+      twitter: '',
     },
+    */
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -64,10 +66,10 @@ module.exports = {
         name: `gatsby-blog-starter`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#1b864c`,
+        theme_color: `#1b864c`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/blog-icon.png`, // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',

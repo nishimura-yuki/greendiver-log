@@ -11,14 +11,16 @@ const Container = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #1b864c;
 `;
 
 const Title = styled.h1`
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 800;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   margin: 0;
+  color: #fff;
 
   ${media.phone`
     text-align: center;

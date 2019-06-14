@@ -39,6 +39,7 @@ const Name = styled.h3`
   text-overflow: ellipsis;
   overflow: hidden;
   font-family: 'system';
+  margin-top: 0;
 `;
 
 const TagLine = styled.sub`
@@ -64,6 +65,7 @@ const Bio = () => (
           <TextContainer>
             <Name>{author}</Name>
             <TagLine>{authorTagline}</TagLine>
+            {/*
             <a
               href={`https://twitter.com/${social.twitter}`}
               target="_blank"
@@ -71,6 +73,7 @@ const Bio = () => (
             >
               <TwitterIcon src={Twitter} alt="twitter" />
             </a>
+            */}
           </TextContainer>
           <ImageContainer>
             <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
