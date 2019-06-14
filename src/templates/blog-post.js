@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { Container, Title, LinkList, Header } from './post-styles';
-import Share from '../components/share';
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -24,7 +23,12 @@ class BlogPostTemplate extends React.Component {
                 color: rgba(0, 0, 0, 0.8);
               `}
             >
-              <span>Posted on {post.frontmatter.date}</span>
+              {post.frontmatter.version > 1 &&
+                <span>更新日: {post.frontmatter.date}</span>  
+              }
+              {!post.frontmatter.version <= 1 &&
+                <span>作成日: {post.frontmatter.date}</span>  
+              }
               <span>&nbsp; - &nbsp;</span>
               <span>{post.fields.readingTime.text}</span>
             </sub>
@@ -34,13 +38,6 @@ class BlogPostTemplate extends React.Component {
               margin: 5rem 0;
             `}
             dangerouslySetInnerHTML={{ __html: post.html }}
-          />
-          <Share
-            post={{
-              title: post.frontmatter.title,
-              excerpt: post.excerpt,
-              author: author,
-            }}
           />
           <LinkList>
             <li>
@@ -85,7 +82,9 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY年MM月DD日")
+        version
+        tags
       }
     }
   }

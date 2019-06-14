@@ -46,6 +46,10 @@ export const Container = styled.article`
     height: 1rem;
     padding: 0;
   }
+
+  img {
+    text-align: left;
+  }
 `;
 
 export const Header = styled.header`
@@ -65,4 +69,8 @@ export const LinkList = styled.ul`
   justify-content: space-between;
   list-style: none;
   padding: 0px;
+
+  & > li{
+    margin-top: 10px;
+  }
 `;

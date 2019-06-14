@@ -21,10 +21,10 @@ const NotFoundPage = () => (
         role="img"
         aria-label="facepalm emoji"
       >
-        🤦🏻‍♂️
+        ☘
       </span>
       <h1>NOT FOUND</h1>
-      <p>I have not added this page yet.</p>
+      <p>ページが存在しません</p>
     </Container>
   </Layout>
 );

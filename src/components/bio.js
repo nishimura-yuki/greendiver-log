@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
 import media from '../utils/media';
-import Twitter from '../images/social/twitter.svg';
 
 const Container = styled.div`
   display: flex;
@@ -49,17 +48,11 @@ const TagLine = styled.sub`
   display: block;
 `;
 
-const TwitterIcon = styled.img`
-  height: 1.5rem;
-  width: 1.5rem;
-  padding: 1.5rem 1rem;
-`;
-
 const Bio = () => (
   <StaticQuery
     query={bioQuery}
     render={data => {
-      const { author, authorTagline, social } = data.site.siteMetadata;
+      const { author, authorTagline, /*social*/ } = data.site.siteMetadata;
       return (
         <Container>
           <TextContainer>
@@ -97,9 +90,6 @@ const bioQuery = graphql`
       siteMetadata {
         author
         authorTagline
-        social {
-          twitter
-        }
       }
     }
   }
