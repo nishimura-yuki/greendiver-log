@@ -64,7 +64,6 @@ exports.createPages = ({ graphql, actions }) => {
 
         // タグごとの一覧ページを作成
         Array.from(tagSet).forEach(tag => {
-          console.log('tag???', tag);
           createPage({
             path: `/tags/${tag}/`,
             component: componentTags,

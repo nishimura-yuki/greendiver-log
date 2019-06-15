@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-minimal-blog",
+  "name": "greendiver-log",
   "private": true,
-  "description": "A simple minimal starter to get up and developing quickly with Gatsby",
+  "description": "greendiver.log",
   "version": "0.1.0",
-  "author": "Boy with Silver Wings <agney@outlook.in>",
+  "author": "Nishimura Yuki",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.0.76",
@@ -68,9 +68,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/BoyWithSilverWings/gatsby-blog-starter"
+    "url": "https://github.com/nishimura-yuki/greendiver-log"
   },
   "bugs": {
-    "url": "https://github.com/BoyWithSilverWings/gatsby-blog-starter/issues"
+    "url": "https://github.com/nishimura-yuki/greendiver-log/issues"
   }
 }
