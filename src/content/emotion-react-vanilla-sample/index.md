@@ -1,5 +1,4 @@
 ---
-path: "/emotion-react-vanilla-sample/"
 date: "2018-12-29T16:22:43Z"
 version: 1
 title: "emotionでReact, Vanillaの両方で同じCSSを利用してみた"

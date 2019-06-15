@@ -1,5 +1,4 @@
 ---
-path: "/form-input-recover/"
 date: "2019-05-11T01:52:10Z"
 version: 1
 title: "フォームの入力情報を自動保存&復元するJSライブラリをつくってみた"

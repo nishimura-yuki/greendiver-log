@@ -29,7 +29,10 @@ const Post = ({ node }) => (
     <Container>
       <Title>{node.frontmatter.title}</Title>
       <sub>
-        <span>on {node.frontmatter.date}</span>
+        <span>
+         {node.frontmatter.version > 1 && `更新日: ${node.frontmatter.date}`}
+         {node.frontmatter.version <= 1 && `作成日: ${node.frontmatter.date}`}
+        </span>
         <span>&nbsp; - &nbsp;</span>
         <span>{node.fields.readingTime.text}</span>
       </sub>

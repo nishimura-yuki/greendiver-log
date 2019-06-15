@@ -1,5 +1,4 @@
 ---
-path: "/ie-draggable-with-input-and-textarea/"
 date: "2018-12-22T10:07:04Z"
 version: 1
 title: "IE11で「draggable = true」内のinput, textareaがうまく動かないので対策した"

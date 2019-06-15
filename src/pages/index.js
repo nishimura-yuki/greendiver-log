@@ -47,8 +47,9 @@ export const pageQuery = graphql`
             }
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
+            date(formatString: "YYYY年MM月DD日")
+            version
           }
         }
       }

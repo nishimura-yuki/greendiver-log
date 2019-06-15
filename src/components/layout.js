@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import Header from './header';
 import media from '../utils/media';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -72,6 +73,11 @@ const GlobalStyles = createGlobalStyle`
     padding-left: 0.75em;
     border-left: 0.25em solid #f99;
     color: 
+  }
+
+  .gatsby-highlight pre[class*="language-"].line-numbers {
+    padding: 0;
+    padding-left: 2.8em;
   }
 
   .gatsby-code-title {
