@@ -31,6 +31,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-code-titles`,
           {
             resolve: `gatsby-remark-external-links`,
             options: {
@@ -41,9 +42,6 @@ module.exports = {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
               offsetY: `30`,
-              icon: false,
-              className: `custom-class`,
-              maintainCase: true,
             },
           },
           {

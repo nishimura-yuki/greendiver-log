@@ -32,6 +32,7 @@ const TagLink = styled.a`
   cursor: pointer;
   text-decoration: none;
   background-color: #ddd;
+  margin: 0 2px;
   padding: 4px 8px;
   border-radius: 6px;
   color: black;

@@ -29,6 +29,7 @@ const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
     position: relative;
     font-size: 1.6rem;
+    background-color: #1b864c;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -40,7 +41,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h3 {
-    font-size: 2.4rem;
+    font-size: 2.0rem;
   }
 
   h4 {
@@ -61,6 +62,30 @@ const GlobalStyles = createGlobalStyle`
     color: inherit;
     font-size: medium;
   }
+
+  .gatsby-highlight-code-line {
+    background-color: #7f2d2d;
+    display: block;
+    margin-right: -1em;
+    margin-left: -1em;
+    padding-right: 1em;
+    padding-left: 0.75em;
+    border-left: 0.25em solid #f99;
+    color: 
+  }
+
+  .gatsby-code-title {
+    background: #1b864c;
+    color: #fff;
+    margin-bottom: -0.65em;
+    padding: 0.8rem 1.05rem;
+    font-size: 0.8em;
+    line-height: 0.4;
+    font-weight: 600;
+    border-radius: 4px 4px 0 0;
+    display: table;
+  }
+
 `;
 
 const Footer = styled.footer`
@@ -72,6 +97,8 @@ const Content = styled.div`
   width: 60%;
   max-width: 728px;
   margin: 0 auto;
+  padding: 10px 30px 30px;
+  background-color: white;
 
   ${media.tablet`
     width: 80%;
