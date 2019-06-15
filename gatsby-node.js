@@ -5,7 +5,9 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve(`./src/templates/blog-post.js`);
+    const componentBlogPost = path.resolve(`./src/templates/blog-post.js`);
+    const componentTags = path.resolve(`./src/templates/tags.js`);
+
     resolve(
       graphql(
         `
@@ -21,6 +23,7 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                   frontmatter {
                     title
+                    tags
                   }
                 }
               }
@@ -33,24 +36,44 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors);
         }
 
-        // Create blog posts pages.
+        // graphqlで取得した記事情報
         const posts = result.data.allMarkdownRemark.edges;
+        const tagSet = new Set();
 
+        // 記事ページを作成
         posts.forEach((post, index) => {
-          const previous =
-            index === posts.length - 1 ? null : posts[index + 1].node;
+          const previous = index === posts.length - 1 ? null : posts[index + 1].node;
           const next = index === 0 ? null : posts[index - 1].node;
 
           createPage({
             path: post.node.fields.slug,
-            component: blogPost,
+            component: componentBlogPost,
             context: {
               slug: post.node.fields.slug,
               previous,
               next,
             },
           });
+
+          // タグ情報を記録
+          const tags = post.node.frontmatter.tags;
+          tags.forEach(t => tagSet.add(t));
         });
+
+        console.log('tag set', tagSet);
+
+        // タグごとの一覧ページを作成
+        Array.from(tagSet).forEach(tag => {
+          console.log('tag???', tag);
+          createPage({
+            path: `/tags/${tag}/`,
+            component: componentTags,
+            context: {
+              tag
+            }
+          })
+        });
+
       })
     );
   });

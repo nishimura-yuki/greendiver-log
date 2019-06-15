@@ -3,7 +3,7 @@ path: "/travisci-s3deploy-error/"
 date: "2019-05-13T11:04:46Z"
 version: 1
 title: "Travis CIでAWS S3に「acl: public」指定でデプロイするときに「Oops, It looks like you tried to write to a bucket that isn't yours or doesn't exist yet. 」エラーでハマった件"
-tags: ["ci/cd"]
+tags: ["ci_cd"]
 ---
 
 どうも greendiver234 です。
